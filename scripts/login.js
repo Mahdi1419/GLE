@@ -17,7 +17,7 @@ window.onload = async () => {
 
 
     // Finding password input and login 
-    const password_input = await getData("#login_password"
+    const password_input = await getData("#login_password")
     const login_btn = await getData("#login_control_continue")
     let type_password = await type(password, 'password')
     await sleep(1000)
