@@ -1,0 +1,61 @@
+{
+    "manifest_version": 3,
+    "name": "GroupLancing_Analyzer",
+    "version": "1.0",
+    "description": "GroupLancing_Analyzer",
+    "icons": {
+        "128": "icons/gpe-128.png",
+        "48": "icons/gpe-48.png",
+        "19": "icons/gpe.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.upwork.com/*"
+            ],
+            "css": [],
+            "js": [
+                "./modules/axios.min.js",
+                "./modules/jquery.js",
+                "./scripts/tools.js"
+            ]
+        },
+        {
+            "matches": [
+                "*://www.upwork.com/*account-security/login*"
+            ],
+            "css": [],
+            "js": [
+                "./scripts/login.js"
+            ]
+        },
+        {
+            "matches": [
+                "*://www.upwork.com/*find-work/best-matches*"
+            ],
+            "css": [],
+            "js": [
+                "./scripts/homeData.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "pages/popup.html",
+        "default_icon": {
+            "128": "icons/gpe-128.png",
+            "48": "icons/gpe-48.png",
+            "19": "icons/gpe.png"
+        }
+    },
+    "permissions": [
+        "tabs",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ]
+}

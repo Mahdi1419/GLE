@@ -1,0 +1,109 @@
+@import url("./global.css");
+
+
+* {
+    user-select: none;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+.ex-container {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem
+}
+
+img.upwork {
+
+    animation: shake .5s;
+
+    animation-delay: .3s;
+
+    width: 80px;
+
+    margin-right: 0.3rem;
+
+    margin-top: 0.05rem;
+}
+
+img.upwork+span {
+    font-family: "Gotham";
+    /* font-weight: unset; */
+}
+
+.desc {
+    margin: 1rem 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc h1 {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 1rem;
+}
+
+footer {
+    /* width: 100%; */
+    display: flex;
+    align-items: flex-start;
+    margin-top: .5rem;
+    flex-direction: column;
+}
+
+.owner {
+    width: max-content;
+    font-family: gotham;
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+
+
+#r1 {
+    transition: width .25s .2s;
+    width: 0;
+}
+
+#r2 {
+    transition: width .25s .3s;;
+    width: 0;
+}
